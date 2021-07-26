@@ -36,6 +36,16 @@ h1 {
     font-weight: 900;
 }
 
+
+.anime-container img {
+    width: 30px;
+    position: absolute;
+    right: 20px;
+    bottom: 17px;
+    cursor: pointer;
+}
+
+
 .anime {
     background: white;
     color: #333;

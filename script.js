@@ -1,5 +1,6 @@
 const quoteEl = document.querySelector(".quote__text");
 const animeEl = document.querySelector(".anime__name");
+const reloadBtn = document.getElementById("reload");
 
 async function getQuote() {
     const res = await fetch("https://animechan.vercel.app/api/random");
@@ -16,3 +17,14 @@ async function main() {
     }
 }
 main();
+
+reloadBtn.addEventListener("click", () => {
+    quoteEl.innerHTML = `
+    <div class="spinner-border" role="status">
+        <span class="sr-only"></span>
+    </div>`;
+
+    animeEl.textContent = 'loading...';
+
+    setTimeout(main, 500);
+});
