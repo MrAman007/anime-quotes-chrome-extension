@@ -3,8 +3,13 @@ const animeEl = document.querySelector(".anime__name");
 const reloadBtn = document.getElementById("reload");
 
 async function getQuote() {
-    const res = await fetch("https://animechan.vercel.app/api/random");
-    return res.json();
+    // const res = await fetch("https://animechan.vercel.app/api/random");
+    // return res.json();
+    return {
+        character: "Nobara Kugisaki",
+        quote: "I always get stuck with unfortunate circumstances.",
+        anime: "Jujutsu Kaisen",
+    };
 }
 
 async function main() {
@@ -12,7 +17,7 @@ async function main() {
     if (character.split(" ").length > 20 || anime.split(" ").length > 4) {
         main();
     } else {
-        quoteEl.innerHTML = `<span class="character">${character} 🚀</span> <p>${quote}</p>`;
+        quoteEl.innerHTML = `<div><span class="character">${character} 🚀</span></div> <p>${quote}</p>`;
         animeEl.textContent = anime;
     }
 }
@@ -24,7 +29,7 @@ reloadBtn.addEventListener("click", () => {
         <span class="sr-only"></span>
     </div>`;
 
-    animeEl.textContent = 'loading...';
+    animeEl.textContent = "loading...";
 
     setTimeout(main, 500);
 });

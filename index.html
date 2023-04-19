@@ -6,16 +6,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>anime quotes</title>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link rel="stylesheet" href="./bootstrap.min.css" />
         <link
             href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="./style.css" />
+        <link rel="stylesheet" href="styles/style.css" />
     </head>
     <body>
         <div class="quote">
             <h1>⚔ Anime Quotes ⚔</h1>
+            <div class="filters">
+                <div>
+                    <small>Filter By popular anime:</small><br />
+                    <span class="filter-btn">Naruto</span>
+                    <span class="filter-btn">One peice</span>
+                    <span class="filter-btn">AOT</span>
+                </div>
+                <div>
+                    <small>Filter by popular characters:</small><br />
+                    <span class="filter-btn">Luffy</span>
+                    <span class="filter-btn">Jojo</span>
+                    <span class="filter-btn">Eren</span>
+                </div>
+            </div>
             <div class="quote__text">
                 <div class="spinner-border" role="status">
                     <span class="sr-only"></span>
@@ -26,9 +39,13 @@
                     📺 <strong>Anime:</strong>
                     <span class="anime__name">loading...</span>
                 </div>
-                <img src="./refresh.jpg" alt="reload button" id="reload">
+                <img
+                    src="assets/images/refresh.jpg"
+                    alt="reload button"
+                    id="reload"
+                />
             </div>
         </div>
-        <script src="./script.js"></script>
+        <script src="./index.js"></script>
     </body>
 </html>
